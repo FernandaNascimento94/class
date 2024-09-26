@@ -1,0 +1,44 @@
+import os
+os.system("cls")
+
+class Produto:
+  nome: str
+  fabricante: str
+  tipoProduto: str
+  precoCompra: float
+  precoVenda: float
+
+p1 = Produto()
+p1.nome = "feijão"
+p1.fabricante = "Camil"
+p1.tipoProduto = "Grãos"
+p1.precoCompra = 10.00
+p1.precoVenda = 15.00
+
+p2 = Produto()
+p2.nome = "arroz"
+p2.fabricante = "Camil"
+p2.tipoProduto = "Grãos"
+p2.precoCompra = 8.00
+p2.precoVenda = 10.00
+
+p3 = Produto()
+p3.nome = "café"
+p3.fabricante = "Melita"
+p3.tipoProduto = "Bebidas"
+p3.precoCompra = 16.00
+p3.precoVenda = 19.0
+
+p4 = Produto()
+p4.nome = "leite"
+p4.fabricante = "Nestle"
+p4.tipoProduto = "Bebidas"
+p4.precoCompra = 29.00
+p4.precoVenda = 34.0
+
+p5 = Produto()
+p5.nome = "Macarrão"
+p5.fabricante = "Galo"
+p5.tipoProduto = "Massa"
+p5.precoCompra = 6.00
+p5.precoVenda = 8.00
