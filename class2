@@ -1,0 +1,104 @@
+from class1 import *
+
+print(f"Nome Produto: {p1.nome}")
+print(f"Fabricante: {p1.fabricante}")
+print(f"Tipo de produto: {p1.tipoProduto}")
+print(f"Preço de compra: {p1.precoCompra}")
+print(f"Preço de venda: {p1.precoVenda}")
+lucro = p1.precoVenda - p1.precoCompra
+print(f"Margem de lucro: {lucro}")
+porcentagem = (lucro / p1.precoCompra) * 100
+print(f"Margem de lucro em porcentagem: {porcentagem:.2f}%")
+print("--------------------------------------------")
+
+print(f"Nome Produto: {p2.nome}")
+print(f"Fabricante: {p2.fabricante}")
+print(f"Tipo de produto: {p2.tipoProduto}")
+print(f"Preço de compra: {p2.precoCompra}")
+print(f"Preço de venda: {p2.precoVenda}")
+lucro = p1.precoVenda - p2.precoCompra
+print(f"Margem de lucro: {lucro}")
+porcentagem = (lucro / p1.precoCompra) * 100
+print(f"Margem de lucro em porcentagem: {porcentagem:.2f}%")
+print("--------------------------------------------")
+
+print(f"Nome Produto: {p3.nome}")
+print(f"Fabricante: {p3.fabricante}")
+print(f"Tipo de produto: {p3.tipoProduto}")
+print(f"Preço de compra: {p3.precoCompra}")
+print(f"Preço de venda: {p3.precoVenda}")
+lucro = p1.precoVenda - p3.precoCompra
+print(f"Margem de lucro: {lucro}")
+porcentagem = (lucro / p1.precoCompra) * 100
+print(f"Margem de lucro em porcentagem: {porcentagem:.2f}%")
+print("--------------------------------------------")
+
+print(f"Nome Produto: {p4.nome}")
+print(f"Fabricante: {p4.fabricante}")
+print(f"Tipo de produto: {p4.tipoProduto}")
+print(f"Preço de compra: {p4.precoCompra}")
+print(f"Preço de venda: {p4.precoVenda}")
+lucro = p1.precoVenda - p4.precoCompra
+print(f"Margem de lucro: {lucro}")
+porcentagem = (lucro / p1.precoCompra) * 100
+print(f"Margem de lucro em porcentagem: {porcentagem:.2f}%")
+print("--------------------------------------------")
+
+print(f"Nome Produto: {p5.nome}")
+print(f"Fabricante: {p5.fabricante}")
+print(f"Tipo de produto: {p5.tipoProduto}")
+print(f"Preço de compra: {p5.precoCompra}")
+print(f"Preço de venda: {p5.precoVenda}")
+lucro = p1.precoVenda - p5.precoCompra
+print(f"Margem de lucro: {lucro}")
+porcentagem = (lucro / p1.precoCompra) * 100
+print(f"Margem de lucro em porcentagem: {porcentagem:.2f}%")
+print("--------------------------------------------")
+
+
+def criarProduto() -> Produto:
+    p = Produto()
+    p.nome = input("Digite o nome do produto: ")
+    p.fabricante = input("Digite o fabricante do produto: ")
+    p.tipoProduto = input("Digite o tipo de produto: ")
+    p.precoCompra = float(input("Digite o preço de compra do produto: "))
+    p.precoVenda = float(input("Digite o preço de venda do produto: "))
+    return p
+
+def imprimirProduto(p:Produto):
+    print(f"Tipo do produto: {p.tipoProduto}")
+    print(f"Nome do Produto: {p.nome}")
+    print(f"Fabricante: {p.fabricante}")
+    print(f"Preço de compra: {p.precoCompra}")
+    print(f"Preço de venda: {p.precoVenda}")
+    lucro = p.precoVenda - p.precoCompra
+    print(f"Margem de lucro: {lucro}")
+    porcentagem = lucro / p.precoCompra * 100
+    print(f"Porcentagem do lucro: {porcentagem}")
+    print("--------------------------------------------")
+
+
+
+def menu_principal():
+    produtos = []
+    while True:
+        os.system("cls")
+        print("Escolha Uma Opção:")
+        print("1 - Adicionar Produto")
+        print("2 - Listar Produtos")
+        print("3 - Sair")
+        option = input()
+        os.system("cls")
+        if option == "1":
+            os.system("cls")
+            produtos.append(criarProduto())
+        elif option == "2":
+            for produto in produtos:
+                os.system("cls")
+                imprimirProduto(produto)
+            input()
+        elif option == "3":
+            os.system("cls")
+            break
+
+menu_principal()
